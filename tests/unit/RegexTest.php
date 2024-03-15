@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Unit;
 
+use BrunoWM\ValueObjects\Collection;
 use BrunoWM\ValueObjects\Regex;
 use BrunoWM\ValueObjects\Regex\RegexItem;
 use PHPUnit\Framework\Attributes\CoversClass;
@@ -14,7 +15,7 @@ use PHPUnit\Framework\TestCase;
 final class RegexTest extends TestCase
 {
     #[Test]
-    public function Empty_result_when_pattern_not_match()
+    public function empty_result_when_pattern_not_match()
     {
         $regex = new Regex('abc');
 
@@ -24,7 +25,7 @@ final class RegexTest extends TestCase
     }
 
     #[Test]
-    public function Not_empty_when_regex_returns_result()
+    public function not_empty_when_regex_returns_result()
     {
         $regex = new Regex('teste');
 
@@ -34,7 +35,7 @@ final class RegexTest extends TestCase
     }
 
     #[Test]
-    public function Get_value()
+    public function get_value()
     {
         $regex = new Regex('teste');
 
@@ -46,7 +47,7 @@ final class RegexTest extends TestCase
     }
 
     #[Test]
-    public function Group_regex()
+    public function group_regex()
     {
         $expected = [
             new RegexItem('a', 0),
