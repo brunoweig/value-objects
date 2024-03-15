@@ -8,17 +8,17 @@ class Filepath
 {
     const SEPARATOR = '/';
 
-    private string $directory;
-    private string $extension;
-    private string $filename;
+    private Text $directory;
+    private Text $extension;
+    private Text $filename;
 
     public function __construct(string $filepath)
     {
         $info = pathinfo($filepath);
 
-        $this->directory = $info['dirname'];
-        $this->extension = $info['extension'];
-        $this->filename = $info['filename'];
+        $this->directory = new Text($info['dirname']);
+        $this->extension = new Text($info['extension']);
+        $this->filename = new Text($info['filename']);
     }
 
     public static function createFromParts(string $directory, string $filename, string $extension): self
@@ -26,24 +26,24 @@ class Filepath
         return new self($directory . self::SEPARATOR . $filename . "." . $extension);
     }
 
-    public function getExtension(): string
+    public function getExtension(): Text
     {
         return $this->extension;
     }
 
-    public function getFilename(): string
+    public function getFilename(): Text
     {
         return $this->filename;
     }
 
-    public function getDirectory()
+    public function getDirectory(): Text
     {
         return $this->directory;
     }
 
-    public function getFullFilename(): string
+    public function getFullFilename(): Text
     {
-        return $this->filename . '.' . $this->extension;
+        return new Text($this->filename . '.' . $this->extension);
     }
 
     public function getFullPath(): string
