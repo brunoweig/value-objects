@@ -10,9 +10,11 @@ use BrunoWM\ValueObjects\DataObject;
 use LengthException;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
+use PHPUnit\Framework\Attributes\UsesClass;
 use PHPUnit\Framework\TestCase;
 
 #[CoversClass(DataObject::class)]
+#[UsesClass(Collection::class)]
 final class DataObjectTest extends TestCase
 {
     #[Test]

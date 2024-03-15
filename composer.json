@@ -7,6 +7,10 @@
             "Tests\\Unit\\": "tests/unit"
         }
     },
+    "scripts": {
+        "test": "XDEBUG_MODE=off phpunit",
+        "test:coverage": "XDEBUG_MODE=coverage phpunit"
+    },
     "authors": [
         {
             "name": "Bruno Weigmann de Matos",

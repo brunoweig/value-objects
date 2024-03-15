@@ -9,9 +9,12 @@ use BrunoWM\ValueObjects\Regex;
 use BrunoWM\ValueObjects\Regex\RegexItem;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
+use PHPUnit\Framework\Attributes\UsesClass;
 use PHPUnit\Framework\TestCase;
 
 #[CoversClass(Regex::class)]
+#[UsesClass(RegexItem::class)]
+#[UsesClass(Collection::class)]
 final class RegexTest extends TestCase
 {
     #[Test]

@@ -15,9 +15,12 @@
         </testsuite>
     </testsuites>
 
-    <coverage>
+    <coverage pathCoverage="true">
         <include>
             <directory suffix=".php">src</directory>
         </include>
+        <report>
+            <html outputDirectory="tests/coverage"/>
+        </report>
     </coverage>
 </phpunit>

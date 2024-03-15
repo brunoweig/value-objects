@@ -4,12 +4,15 @@ declare(strict_types=1);
 
 namespace Tests\Unit;
 
+use BrunoWM\ValueObjects\Text;
 use BrunoWM\ValueObjects\Url;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
+use PHPUnit\Framework\Attributes\UsesClass;
 use PHPUnit\Framework\TestCase;
 
 #[CoversClass(Url::class)]
+#[UsesClass(Text::class)]
 final class UrlTest extends TestCase
 {
     #[Test]
