@@ -10,7 +10,7 @@ use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 
 #[CoversClass(Collection::class)]
-class CollectionTest extends TestCase
+final class CollectionTest extends TestCase
 {
     #[Test]
     public function empty_when_create_without_data()

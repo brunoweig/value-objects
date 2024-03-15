@@ -11,7 +11,7 @@ use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 
 #[CoversClass(Regex::class)]
-class RegexTest extends TestCase
+final class RegexTest extends TestCase
 {
     #[Test]
     public function Empty_result_when_pattern_not_match()

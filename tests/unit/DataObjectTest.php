@@ -13,7 +13,7 @@ use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 
 #[CoversClass(DataObject::class)]
-class DataObjectTest extends TestCase
+final class DataObjectTest extends TestCase
 {
     #[Test]
     public function throw_exception_when_empty_data()
