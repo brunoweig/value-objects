@@ -49,4 +49,9 @@ readonly class Text
     {
         return strlen($this->get());
     }
+
+    public function __toString(): string
+    {
+        return $this->value;
+    }
 }
