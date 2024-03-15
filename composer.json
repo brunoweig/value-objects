@@ -1,0 +1,19 @@
+{
+    "name": "brunowm/value-objects",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "BrunoWM\\ValueObjects\\": "src/",
+            "Tests\\Unit\\": "tests/unit"
+        }
+    },
+    "authors": [
+        {
+            "name": "Bruno Weigmann de Matos",
+            "email": "bruno.weig@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "10"
+    }
+}
