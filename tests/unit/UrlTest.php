@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\ValueObject;
+namespace Tests\Unit;
 
 use BrunoWM\ValueObjects\Url;
 use PHPUnit\Framework\Attributes\CoversClass;
