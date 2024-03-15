@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace BrunoWM\ValueObjects\Regex;
 
-class RegexItem
+readonly class RegexItem
 {
     public function __construct(
         public string $pattern,

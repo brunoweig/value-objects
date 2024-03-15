@@ -13,7 +13,7 @@ use PHPUnit\Framework\Attributes\UsesClass;
 use PHPUnit\Framework\TestCase;
 
 #[CoversClass(Regex::class)]
-#[UsesClass(RegexItem::class)]
+#[CoversClass(RegexItem::class)]
 #[UsesClass(Collection::class)]
 final class RegexTest extends TestCase
 {
